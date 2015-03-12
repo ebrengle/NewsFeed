@@ -33,13 +33,16 @@
     <![endif]-->
 
     <div class="container">
-      <h1>My Site Title</h1>
-      <div ng-app></div>
+      <div ng-app="news" ng-controller="ArticlesController as articles">
+        <h1>NSS News</h1>
+        <div ng-include="'js/articles/table.html'"></div>
+      </div>
     </div>
     <script src="bower_components/firebase/firebase.js"></script>
     <script src="bower_components/moment/min/moment.min.js"></script>
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-route/angular-route.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/main.module.js"></script>
+    <script src="js/articles/articles.controller.js"></script>
   </body>
 </html>
